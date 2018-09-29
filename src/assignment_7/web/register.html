@@ -1,0 +1,23 @@
+<div class="content">
+    <h1>Recipes - Registration</h1>
+    <table cellspacing = 0 cellpadding = 3 border = 0>
+        <tr>
+            <td>Username:</td>
+            <td><input class="input" type="text" name="username" ng-model="operator.username"></td>
+        </tr>
+
+        <tr>
+            <td>Password:</td>
+            <td><input  class="input" type="password" name="password" ng-model="operator.password"></td>
+        </tr>
+
+        <tr>
+            <td colspan="2" align="center"><input type="submit" value="Register" ng-click="registerOperator(operator)"></td>
+
+        </tr>
+        <tr>
+            <!--errorMessage-ov tekst se menja i prikazuje kada se klikne na Register. U pocetku je prazan sve dok korisnik ne klikne na register.-->
+            <td class="errorMessage" colspan="2" align="center" ng-bind="errorMessage"></td>
+        </tr>
+    </table>
+</div>

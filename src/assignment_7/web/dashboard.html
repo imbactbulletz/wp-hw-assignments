@@ -1,0 +1,49 @@
+<div class="content">
+    <h1>Dashboard</h1>
+    <div class="recipesTable">
+    <table cellspacing="0" cellpadding="3" border="2">
+        <th>ID</th>
+        <th>Title</th>
+        <th>Content</th>
+
+        <tr ng-repeat="x in recipes">
+            <td ng-bind="x.id"></td>
+            <td ng-bind="x.name"></td>
+            <td ng-bind="x.content"></td>
+        </tr>
+    </table>
+    </div>
+
+    <div class="listAllRecipes">
+        <table cellspacing="0" cellpadding="5" border="0">
+            <tr>
+                <td>Title:</td>
+                <td><input type=text" ng-model="recipe.name"></td>
+            </tr>
+
+            <tr>
+                <td>Content:</td>
+                <td><input type="text" ng-model="recipe.content"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" value="Add recipe" ng-click="addRecipe(recipe)"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" value="List all recipes" ng-click="getAllRecipes()"></td>
+            </tr>
+            <tr>
+                <td>Search by name:</td>
+                <td><input type="text" ng-model="searchCriteria"></td>
+                <td><input type="submit" value="Search" ng-click="searchByName(searchCriteria)"></td>
+            </tr>
+            <tr>
+                <td>Get page:</td>
+                <td>Page number:</td>
+                <td><input type="text" ng-model="pageNumber"></td>
+                <td>Page size:</td>
+                <td><input type="text" ng-model="pageSize"></td>
+                <td><input type="submit" value="Go!" ng-click="getPage(pageNumber,pageSize)"></td>
+            </tr>
+        </table>
+    </div>
+</div>
